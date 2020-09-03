@@ -1,0 +1,36 @@
+buildscript {
+    repositories {
+	    jcenter()
+    }
+
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:5.2.0'
+    }
+}
+
+apply plugin: 'java-library'
+apply plugin: 'com.github.johnrengelman.shadow'
+
+
+repositories {
+    // Use jcenter for resolving dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    jcenter()
+}
+
+shadowJar {
+	dependencies {
+		exclude(dependency('eu.mihosoft.vrl:vrl:0.4.4.0.3'))
+	}
+	destinationDirectory = rootDir
+	archiveFileName = "vlr-pugin.jar"
+	zip64 = true
+}
+
+dependencies {
+	implementation 'eu.mihosoft.vrl:vrl:0.4.4.0.3'
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
