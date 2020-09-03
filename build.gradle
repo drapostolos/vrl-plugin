@@ -23,7 +23,7 @@ shadowJar {
 		exclude(dependency('eu.mihosoft.vrl:vrl:0.4.4.0.3'))
 	}
 	destinationDirectory = rootDir
-	archiveFileName = "vlr-pugin.jar"
+	archiveFileName = "vrl-pugin.jar"
 	zip64 = true
 }
 
