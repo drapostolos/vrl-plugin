@@ -1,6 +1,9 @@
 # vrl-plugin
 
-Run this command to generate the `vrl-pugin.jar`:
+Run these commands to clone this repo and build the `vrl-pugin.jar`:
 ```
- ./gradlew shadowJar
+$ git clone https://github.com/drapostolos/vrl-plugin.git
+$ cd vrl-plugin/
+$ ./gradlew shadowJar
 ```
+Now there is a `vrl-plugin.jar` in the `vrl-plugin` folder.
