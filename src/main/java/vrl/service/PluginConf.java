@@ -22,11 +22,11 @@ public class PluginConf extends VPluginConfigurator{
 	           VPluginAPI vapi = (VPluginAPI) api;
 	           vapi.addComponent(MyComponent.class);
 	       }
+			exportPackage("vrl.service");
 	}
 
 	@Override
 	public void init(InitPluginAPI iApi) {
-		// TODO Auto-generated method stub
 	}
 
 }
