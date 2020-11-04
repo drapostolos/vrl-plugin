@@ -14,6 +14,7 @@ public class PluginConf extends VPluginConfigurator{
 	       setCopyrightInfo("Sample-Plugin---",
 	               "(c) Your Name..",
 	               "www.you.com..", "License Name...", "License Text...");
+	       exportPackage("vrl.service");
 	}
 
 	@Override
@@ -22,7 +23,6 @@ public class PluginConf extends VPluginConfigurator{
 	           VPluginAPI vapi = (VPluginAPI) api;
 	           vapi.addComponent(MyComponent.class);
 	       }
-			exportPackage("vrl.service");
 	}
 
 	@Override
